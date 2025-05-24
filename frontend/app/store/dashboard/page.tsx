@@ -43,7 +43,6 @@ export default function StoreDashboardPage() {
       return;
     }
 
-    // ⛔ user not yet available
     if (!user) return;
 
     try {

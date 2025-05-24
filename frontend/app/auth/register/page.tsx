@@ -36,7 +36,6 @@ export default function RegisterPage() {
   const password = formData.get("password") as string;
   const address = formData.get("address") as string;
 
-  // 🔒 Validation rules
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$/;
 

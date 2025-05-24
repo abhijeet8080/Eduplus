@@ -49,7 +49,6 @@ export default function LoginPage() {
       token: res.data.token,
     })
   );
-  // Save token
   localStorage.setItem("token", data.token);
 toast.message('Login Successful', {
   description: 'Welcome back!',
@@ -60,7 +59,7 @@ toast.message('Login Successful', {
 } catch (err) {
   console.log("Error", err);
   if (process.env.NODE_ENV === "development") {
-    console.warn("Handled login error:"); // or remove this
+    console.warn("Handled login error:"); 
   }
 } finally {
   setLoading(false);

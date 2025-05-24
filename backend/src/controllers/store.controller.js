@@ -84,7 +84,6 @@ exports.getAllStores = async (req, res) => {
       },
     });
 
-    // Compute average rating
     const storesWithAvg = stores.map((store) => {
       const values = store.ratings.map((r) => r.value);
       const avgRating =
@@ -175,7 +174,6 @@ exports.getStoreDetailsFromUserId = async (req, res) => {
       return res.status(404).json({ message: "No stores found for this user" });
     }
 
-    // Add average rating per store
     const storeDetails = stores.map((store) => {
       const ratingValues = store.ratings.map((r) => r.value);
       const avgRating =

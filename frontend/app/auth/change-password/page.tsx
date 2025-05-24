@@ -32,10 +32,10 @@ export default function ChangePasswordPage() {
       return;
     }
 
-    // if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,16}$/.test(newPassword)) {
-    //   toast.warning("Password must be 8–16 characters with one uppercase and one special character.");
-    //   return;
-    // }
+    if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,16}$/.test(newPassword)) {
+      toast.warning("Password must be 8–16 characters with one uppercase and one special character.");
+      return;
+    }
 
     try {
       setLoading(true);
